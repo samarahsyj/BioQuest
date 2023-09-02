@@ -11,8 +11,7 @@ public class Menu : MonoBehaviour
     public void setUp(EmptyTileManager _menu)
     {
         position.gameObject.SetActive(true);
-        Debug.Log("here");
-        position.text = "Location:" + _menu.gridPosition;
+        position.text = "Buildings:";
     }
 
     
