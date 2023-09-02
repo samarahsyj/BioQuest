@@ -24,7 +24,6 @@ public class Trash : MonoBehaviour
                     Random.Range(spawnArea.position.z - spawnArea.localScale.z / 2, spawnArea.position.z + spawnArea.localScale.z / 2)
                 );
             Instantiate(objectPrefab,randomPosition,Quaternion.identity);
-
         }
     }
 
