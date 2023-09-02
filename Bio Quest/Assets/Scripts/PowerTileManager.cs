@@ -8,7 +8,6 @@ public enum powerType { solar, wind, hydro}
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PowerTile", order = 1)]
 public class PowerTileManager : ScriptableObject
 {
-    [SerializeField] powerType type;
 
     // Start is called before the first frame update
 
