@@ -20,6 +20,8 @@ public class EmptyTileManager : MonoBehaviour
 
     public void OnMouseExit()
     {
+
+        //check if window is open
         highlight.SetActive(false);
     }
 
