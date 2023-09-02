@@ -6,7 +6,7 @@ using UnityEngine;
 public enum powerType { solar, wind, hydro}
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/PowerTile", order = 1)]
-public class PowerTileManager : ScriptableObject
+public class PowerTypeManager : ScriptableObject
 {
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class PowerTileManager : ScriptableObject
     [TextArea(5, 10)] public string description;
     public int energyProduction;
     public int duration;
-    public Sprite image;
+    public Sprite Image;
 
     void Start()
     {
