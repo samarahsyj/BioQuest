@@ -5,12 +5,19 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static GridManager instance;
+    
 
+    public void Awake()
+    {
+        instance = this;
+    }
 
     [SerializeField] int xsize, ysize;
     public EmptyTileManager[,] grid;
     [SerializeField] EmptyTileManager _emptyPrefab;
     [SerializeField] HouseTileManager _housePrefab;
+    [SerializeField] public Menu menuPrefab;
     public HouseTileManager[] house_grid;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +37,7 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < ysize; y++)
             {
                 grid[x, y] = Instantiate(_emptyPrefab, new Vector2(x + 0.5f, y + 0.5f), Quaternion.identity);
-                grid[x, y].SetUp(new Vector2(x, y));
+                grid[x, y].SetUp(new Vector2Int(x, y));
             }
 
 
@@ -44,6 +51,7 @@ public class GridManager : MonoBehaviour
             house_grid[x].SetUp(new Vector2(x, ysize));
         }
     }
+    
    
 
     // Update is called once per frame
